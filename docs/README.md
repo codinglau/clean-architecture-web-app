@@ -1,10 +1,10 @@
 ---
-title: Mitsubishi Controller Web Application
-author: "Raymond Lau"
-date: "2024-10-17"
+title: Clean Architecture Blazor Web Application
+author: "Coding Lau"
+date: "2024-10-22"
 ---
 
-# Mitsubishi Controller Web Application
+# Mitsubishi Controller Blazor Web Application
 
 ## Table of Contents
 
@@ -32,8 +32,6 @@ A Clean Architecture typically separates concerns into different projects. You c
 3. Domain - Core domain entities and aggregates.
 4. Infrastructure - Implementations (e.g., database access, external services).
 5. Shared Kernel (optional) - Shared logic across multiple layers (if needed).
-
-![Clean Architecture](./images/clean-architecture.png)
 
 
 __Create the Projects:__
@@ -171,14 +169,18 @@ dotnet add package Microsoft.EntityFrameworkCore.Tools
 
 dotnet add package Aspire.Npgsql.EntityFrameworkCore.PostgreSQL
 
-dotnet add package Serilog
-dotnet add package Serilog.Sinks.Console
-dotnet add package Serilog.Sinks.File
-
 dotnet add package Coravel
 dotnet add package Newtonsoft.Json
 
 dotnet add package Swashbuckle.AspNetCore
+
+# UI Layer
+dotnet add package Serilog
+dotnet add package Serilog.Sinks.Console
+dotnet add package Serilog.Sinks.File
+dotnet add package Serilog.Extensions.Logging
+dotnet add package Serilog.Extensions.Hosting
+dotnet add package Serilog.Settings.Configuration
 ```
 
 Install these packages in the appropriate projects depending on your design.

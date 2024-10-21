@@ -4,6 +4,138 @@
     "/Users/kwlau/Projects/202408_dotnet/CleanArchitectureWebApp/CleanArchitectureWebApp.Infrastructure/CleanArchitectureWebApp.Infrastructure.csproj": {}
   },
   "projects": {
+    "/Users/kwlau/Projects/202408_dotnet/CleanArchitectureWebApp/CleanArchitectureWebApp.Application/CleanArchitectureWebApp.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/kwlau/Projects/202408_dotnet/CleanArchitectureWebApp/CleanArchitectureWebApp.Application/CleanArchitectureWebApp.Application.csproj",
+        "projectName": "CleanArchitectureWebApp.Application",
+        "projectPath": "/Users/kwlau/Projects/202408_dotnet/CleanArchitectureWebApp/CleanArchitectureWebApp.Application/CleanArchitectureWebApp.Application.csproj",
+        "packagesPath": "/Users/kwlau/.nuget/packages/",
+        "outputPath": "/Users/kwlau/Projects/202408_dotnet/CleanArchitectureWebApp/CleanArchitectureWebApp.Application/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/kwlau/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/kwlau/Projects/202408_dotnet/CleanArchitectureWebApp/CleanArchitectureWebApp.Domain/CleanArchitectureWebApp.Domain.csproj": {
+                "projectPath": "/Users/kwlau/Projects/202408_dotnet/CleanArchitectureWebApp/CleanArchitectureWebApp.Domain/CleanArchitectureWebApp.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.303/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/kwlau/Projects/202408_dotnet/CleanArchitectureWebApp/CleanArchitectureWebApp.Domain/CleanArchitectureWebApp.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/kwlau/Projects/202408_dotnet/CleanArchitectureWebApp/CleanArchitectureWebApp.Domain/CleanArchitectureWebApp.Domain.csproj",
+        "projectName": "CleanArchitectureWebApp.Domain",
+        "projectPath": "/Users/kwlau/Projects/202408_dotnet/CleanArchitectureWebApp/CleanArchitectureWebApp.Domain/CleanArchitectureWebApp.Domain.csproj",
+        "packagesPath": "/Users/kwlau/.nuget/packages/",
+        "outputPath": "/Users/kwlau/Projects/202408_dotnet/CleanArchitectureWebApp/CleanArchitectureWebApp.Domain/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/kwlau/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/kwlau/Projects/202408_dotnet/CleanArchitectureWebApp/CleanArchitectureWebApp.SharedKernel/CleanArchitectureWebApp.SharedKernel.csproj": {
+                "projectPath": "/Users/kwlau/Projects/202408_dotnet/CleanArchitectureWebApp/CleanArchitectureWebApp.SharedKernel/CleanArchitectureWebApp.SharedKernel.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.303/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "/Users/kwlau/Projects/202408_dotnet/CleanArchitectureWebApp/CleanArchitectureWebApp.Infrastructure/CleanArchitectureWebApp.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -12,6 +144,109 @@
         "projectPath": "/Users/kwlau/Projects/202408_dotnet/CleanArchitectureWebApp/CleanArchitectureWebApp.Infrastructure/CleanArchitectureWebApp.Infrastructure.csproj",
         "packagesPath": "/Users/kwlau/.nuget/packages/",
         "outputPath": "/Users/kwlau/Projects/202408_dotnet/CleanArchitectureWebApp/CleanArchitectureWebApp.Infrastructure/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/kwlau/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/kwlau/Projects/202408_dotnet/CleanArchitectureWebApp/CleanArchitectureWebApp.Application/CleanArchitectureWebApp.Application.csproj": {
+                "projectPath": "/Users/kwlau/Projects/202408_dotnet/CleanArchitectureWebApp/CleanArchitectureWebApp.Application/CleanArchitectureWebApp.Application.csproj"
+              },
+              "/Users/kwlau/Projects/202408_dotnet/CleanArchitectureWebApp/CleanArchitectureWebApp.Domain/CleanArchitectureWebApp.Domain.csproj": {
+                "projectPath": "/Users/kwlau/Projects/202408_dotnet/CleanArchitectureWebApp/CleanArchitectureWebApp.Domain/CleanArchitectureWebApp.Domain.csproj"
+              },
+              "/Users/kwlau/Projects/202408_dotnet/CleanArchitectureWebApp/CleanArchitectureWebApp.SharedKernel/CleanArchitectureWebApp.SharedKernel.csproj": {
+                "projectPath": "/Users/kwlau/Projects/202408_dotnet/CleanArchitectureWebApp/CleanArchitectureWebApp.SharedKernel/CleanArchitectureWebApp.SharedKernel.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Aspire.Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[8.2.1, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Serilog": {
+              "target": "Package",
+              "version": "[4.0.2, )"
+            },
+            "Serilog.Sinks.Console": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Serilog.Sinks.File": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.303/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/kwlau/Projects/202408_dotnet/CleanArchitectureWebApp/CleanArchitectureWebApp.SharedKernel/CleanArchitectureWebApp.SharedKernel.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/kwlau/Projects/202408_dotnet/CleanArchitectureWebApp/CleanArchitectureWebApp.SharedKernel/CleanArchitectureWebApp.SharedKernel.csproj",
+        "projectName": "CleanArchitectureWebApp.SharedKernel",
+        "projectPath": "/Users/kwlau/Projects/202408_dotnet/CleanArchitectureWebApp/CleanArchitectureWebApp.SharedKernel/CleanArchitectureWebApp.SharedKernel.csproj",
+        "packagesPath": "/Users/kwlau/.nuget/packages/",
+        "outputPath": "/Users/kwlau/Projects/202408_dotnet/CleanArchitectureWebApp/CleanArchitectureWebApp.SharedKernel/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/kwlau/.nuget/NuGet/NuGet.Config"

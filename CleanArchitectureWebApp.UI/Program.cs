@@ -1,6 +1,20 @@
 using CleanArchitectureWebApp.UI.Components;
+using CleanArchitectureWebApp.UI.Configurations;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// builder.Logging.ClearProviders();
+
+var logger = Log.Logger = new LoggerConfiguration()
+    .Enrich.FromLogContext()
+    .WriteTo.Console()
+    .CreateLogger();
+
+logger.Information("Starting up...");
+
+builder.AddLoggerConfigs();
+
+var appLogger = new SerilogLoggerFactory(logger).CreateLogger<Program>();
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
