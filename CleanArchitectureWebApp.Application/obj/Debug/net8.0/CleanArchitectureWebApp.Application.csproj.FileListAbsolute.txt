@@ -1,0 +1,17 @@
+/Users/kwlau/Projects/202408_dotnet/CleanArchitectureWebApp/CleanArchitectureWebApp.Application/bin/Debug/net8.0/CleanArchitectureWebApp.Application.deps.json
+/Users/kwlau/Projects/202408_dotnet/CleanArchitectureWebApp/CleanArchitectureWebApp.Application/bin/Debug/net8.0/CleanArchitectureWebApp.Application.dll
+/Users/kwlau/Projects/202408_dotnet/CleanArchitectureWebApp/CleanArchitectureWebApp.Application/bin/Debug/net8.0/CleanArchitectureWebApp.Application.pdb
+/Users/kwlau/Projects/202408_dotnet/CleanArchitectureWebApp/CleanArchitectureWebApp.Application/bin/Debug/net8.0/CleanArchitectureWebApp.Domain.dll
+/Users/kwlau/Projects/202408_dotnet/CleanArchitectureWebApp/CleanArchitectureWebApp.Application/bin/Debug/net8.0/CleanArchitectureWebApp.SharedKernel.dll
+/Users/kwlau/Projects/202408_dotnet/CleanArchitectureWebApp/CleanArchitectureWebApp.Application/bin/Debug/net8.0/CleanArchitectureWebApp.Domain.pdb
+/Users/kwlau/Projects/202408_dotnet/CleanArchitectureWebApp/CleanArchitectureWebApp.Application/bin/Debug/net8.0/CleanArchitectureWebApp.SharedKernel.pdb
+/Users/kwlau/Projects/202408_dotnet/CleanArchitectureWebApp/CleanArchitectureWebApp.Application/obj/Debug/net8.0/CleanArchitectureWebApp.Application.csproj.AssemblyReference.cache
+/Users/kwlau/Projects/202408_dotnet/CleanArchitectureWebApp/CleanArchitectureWebApp.Application/obj/Debug/net8.0/CleanArchitectureWebApp.Application.GeneratedMSBuildEditorConfig.editorconfig
+/Users/kwlau/Projects/202408_dotnet/CleanArchitectureWebApp/CleanArchitectureWebApp.Application/obj/Debug/net8.0/CleanArchitectureWebApp.Application.AssemblyInfoInputs.cache
+/Users/kwlau/Projects/202408_dotnet/CleanArchitectureWebApp/CleanArchitectureWebApp.Application/obj/Debug/net8.0/CleanArchitectureWebApp.Application.AssemblyInfo.cs
+/Users/kwlau/Projects/202408_dotnet/CleanArchitectureWebApp/CleanArchitectureWebApp.Application/obj/Debug/net8.0/CleanArchitectureWebApp.Application.csproj.CoreCompileInputs.cache
+/Users/kwlau/Projects/202408_dotnet/CleanArchitectureWebApp/CleanArchitectureWebApp.Application/obj/Debug/net8.0/CleanArc.F3153240.Up2Date
+/Users/kwlau/Projects/202408_dotnet/CleanArchitectureWebApp/CleanArchitectureWebApp.Application/obj/Debug/net8.0/CleanArchitectureWebApp.Application.dll
+/Users/kwlau/Projects/202408_dotnet/CleanArchitectureWebApp/CleanArchitectureWebApp.Application/obj/Debug/net8.0/refint/CleanArchitectureWebApp.Application.dll
+/Users/kwlau/Projects/202408_dotnet/CleanArchitectureWebApp/CleanArchitectureWebApp.Application/obj/Debug/net8.0/CleanArchitectureWebApp.Application.pdb
+/Users/kwlau/Projects/202408_dotnet/CleanArchitectureWebApp/CleanArchitectureWebApp.Application/obj/Debug/net8.0/ref/CleanArchitectureWebApp.Application.dll

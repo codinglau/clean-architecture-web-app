@@ -1,0 +1,11 @@
+/Users/kwlau/Projects/202408_dotnet/CleanArchitectureWebApp/CleanArchitectureWebApp.SharedKernel/bin/Debug/net8.0/CleanArchitectureWebApp.SharedKernel.deps.json
+/Users/kwlau/Projects/202408_dotnet/CleanArchitectureWebApp/CleanArchitectureWebApp.SharedKernel/bin/Debug/net8.0/CleanArchitectureWebApp.SharedKernel.dll
+/Users/kwlau/Projects/202408_dotnet/CleanArchitectureWebApp/CleanArchitectureWebApp.SharedKernel/bin/Debug/net8.0/CleanArchitectureWebApp.SharedKernel.pdb
+/Users/kwlau/Projects/202408_dotnet/CleanArchitectureWebApp/CleanArchitectureWebApp.SharedKernel/obj/Debug/net8.0/CleanArchitectureWebApp.SharedKernel.GeneratedMSBuildEditorConfig.editorconfig
+/Users/kwlau/Projects/202408_dotnet/CleanArchitectureWebApp/CleanArchitectureWebApp.SharedKernel/obj/Debug/net8.0/CleanArchitectureWebApp.SharedKernel.AssemblyInfoInputs.cache
+/Users/kwlau/Projects/202408_dotnet/CleanArchitectureWebApp/CleanArchitectureWebApp.SharedKernel/obj/Debug/net8.0/CleanArchitectureWebApp.SharedKernel.AssemblyInfo.cs
+/Users/kwlau/Projects/202408_dotnet/CleanArchitectureWebApp/CleanArchitectureWebApp.SharedKernel/obj/Debug/net8.0/CleanArchitectureWebApp.SharedKernel.csproj.CoreCompileInputs.cache
+/Users/kwlau/Projects/202408_dotnet/CleanArchitectureWebApp/CleanArchitectureWebApp.SharedKernel/obj/Debug/net8.0/CleanArchitectureWebApp.SharedKernel.dll
+/Users/kwlau/Projects/202408_dotnet/CleanArchitectureWebApp/CleanArchitectureWebApp.SharedKernel/obj/Debug/net8.0/refint/CleanArchitectureWebApp.SharedKernel.dll
+/Users/kwlau/Projects/202408_dotnet/CleanArchitectureWebApp/CleanArchitectureWebApp.SharedKernel/obj/Debug/net8.0/CleanArchitectureWebApp.SharedKernel.pdb
+/Users/kwlau/Projects/202408_dotnet/CleanArchitectureWebApp/CleanArchitectureWebApp.SharedKernel/obj/Debug/net8.0/ref/CleanArchitectureWebApp.SharedKernel.dll
