@@ -4,26 +4,50 @@ author: "Coding Lau"
 date: "2024-10-22"
 ---
 
-# Mitsubishi Controller Blazor Web Application
+# 1. A Blazor Web Application
 
-## Table of Contents
+__Table of Content__
+
+- [1. A Blazor Web Application](#1-a-blazor-web-application)
+  - [1.1. Steps to Set Up a Blazor Project with Clean Architecture](#11-steps-to-set-up-a-blazor-project-with-clean-architecture)
+    - [1.1.1. Install .NET SDK](#111-install-net-sdk)
+    - [1.1.2. Create Project Structure](#112-create-project-structure)
+    - [1.1.3. Add Project References](#113-add-project-references)
+    - [1.1.4. Install Dependencies (Optional)](#114-install-dependencies-optional)
+    - [1.1.5. Implement the Layers](#115-implement-the-layers)
+    - [1.1.6. Configure Dependency Injection](#116-configure-dependency-injection)
+    - [1.1.7. Run the Application](#117-run-the-application)
+    - [1.1.8. Test the Application](#118-test-the-application)
+      - [1.1.8.1. __Unit Tests Project__](#1181-unit-tests-project)
+        - [1.1.8.1.1. References for Unit Tests:](#11811-references-for-unit-tests)
+      - [1.1.8.2. __Integration Tests Project__](#1182-integration-tests-project)
+        - [1.1.8.2.1. References for Integration Tests:](#11821-references-for-integration-tests)
+      - [1.1.8.3. Steps for Referencing Test Projects to Other Layers](#1183-steps-for-referencing-test-projects-to-other-layers)
+      - [1.1.8.4. Best Practices for Test Project References](#1184-best-practices-for-test-project-references)
+      - [1.1.8.5. Example of Integration Test with In-Memory Database](#1185-example-of-integration-test-with-in-memory-database)
+      - [1.1.8.6. Summary](#1186-summary)
+    - [1.1.9. Summary of the Folder Structure](#119-summary-of-the-folder-structure)
+    - [1.1.10. Root Directory Structure:](#1110-root-directory-structure)
+    - [1.1.11. Key Components:](#1111-key-components)
+    - [1.1.12. Benefits of This Structure:](#1112-benefits-of-this-structure)
 
 
-## Steps to Set Up a Blazor Project with Clean Architecture
+
+## 1.1. Steps to Set Up a Blazor Project with Clean Architecture
 
 To set up a Blazor project using Clean Architecture with .NET, follow these steps:
 
 
-### 1. Install .NET SDK
+### 1.1.1. Install .NET SDK
 
 If you haven’t already installed the .NET SDK, download it from here. Verify the installation by running:
 
-```properties
+```bash
 dotnet --version
 ```
 
 
-### 2. Create Project Structure
+### 1.1.2. Create Project Structure
 
 A Clean Architecture typically separates concerns into different projects. You can have the following projects:
 
@@ -38,7 +62,7 @@ __Create the Projects:__
 
 Start by creating a Blazor project for the UI layer:
 
-```properties
+```bash
 dotnet new blazor -n CleanArchitectureWebApp.UI
 ```
 
@@ -46,31 +70,31 @@ Create Class Library Projects
 
 1. Application layer:
 
-```properties
+```bash
 dotnet new classlib -n CleanArchitectureWebApp.Application
 ```
 
 2. Domain layer:
 
-```properties
+```bash
 dotnet new classlib -n CleanArchitectureWebApp.Domain
 ```
 
 3. Infrastructure layer:
 
-```properties
+```bash
 dotnet new classlib -n CleanArchitectureWebApp.Infrastructure
 ```
 
 4. (Optional) Create a shared kernel project for reusable logic:
 
-```properties
+```bash
 dotnet new classlib -n CleanArchitectureWebApp.SharedKernel
 ```
 
 5. Test projects (optional):
 
-```properties
+```bash
 dotnet new xunit -o CleanArchitectureWebApp.Tests.Domain
 dotnet new xunit -o CleanArchitectureWebApp.Tests.Application
 dotnet new xunit -o CleanArchitectureWebApp.Tests.Infrastructure
@@ -79,31 +103,31 @@ dotnet new xunit -o CleanArchitectureWebApp.Tests.UI
 
 6. Integration tests (optional):
 
-```properties
+```bash
 dotnet new xunit -o CleanArchitectureWebApp.IntegrationTests
 ```
 
-### 3. Add Project References
+### 1.1.3. Add Project References
 
 To ensure projects can communicate properly, add the necessary references:
 
 1. From UI project to Application:
 
-```properties
+```bash
 cd CleanArchitectureWebApp.UI
 dotnet add reference ../CleanArchitectureWebApp.Application
 ```
 
 2. From Application to Domain:
 
-```properties
+```bash
 cd ../CleanArchitectureWebApp.Application
 dotnet add reference ../CleanArchitectureWebApp.Domain
 ```
 
 3. From Infrastructure to both Application and Domain:
 
-```properties
+```bash
 cd ../CleanArchitectureWebApp.Infrastructure
 dotnet add reference ../CleanArchitectureWebApp.Application
 dotnet add reference ../CleanArchitectureWebApp.Domain
@@ -111,7 +135,7 @@ dotnet add reference ../CleanArchitectureWebApp.Domain
 
 4. If using the Shared Kernel, reference it from Domain, Application, and Infrastructure if needed.
 
-```properties
+```bash
 cd ../CleanArchitectureWebApp.Domain
 dotnet add reference ../CleanArchitectureWebApp.SharedKernel
 
@@ -124,7 +148,7 @@ dotnet add reference ../CleanArchitectureWebApp.SharedKernel
 
 5. If you have test projects, reference the appropriate layers:
 
-```properties
+```bash
 cd ../CleanArchitectureWebApp.Tests.Domain
 dotnet add reference ../CleanArchitectureWebApp.Domain
 
@@ -140,7 +164,7 @@ dotnet add reference ../CleanArchitectureWebApp.UI
 
 6. If you have integration tests, reference the necessary layers:
 
-```properties
+```bash
 cd ../CleanArchitectureWebApp.IntegrationTests
 dotnet add reference ../CleanArchitectureWebApp.Application
 dotnet add reference ../CleanArchitectureWebApp.Infrastructure
@@ -148,11 +172,11 @@ dotnet add reference ../CleanArchitectureWebApp.Domain
 ```
 
 
-### 4. Install Dependencies (Optional)
+### 1.1.4. Install Dependencies (Optional)
 
 You may want to add dependencies like MediatR, FluentValidation, or Entity Framework Core for Clean Architecture patterns. Install them using NuGet:
 
-```properties
+```bash
 # Domain Layer
 dotnet add package FluentValidation
 
@@ -186,7 +210,7 @@ dotnet add package Serilog.Settings.Configuration
 Install these packages in the appropriate projects depending on your design.
 
 
-### 5. Implement the Layers
+### 1.1.5. Implement the Layers
 
 __Domain Layer__
 - Define entities, value objects, and aggregates here.
@@ -260,7 +284,7 @@ Then in a Blazor component:
 ```
 
 
-### 6. Configure Dependency Injection
+### 1.1.6. Configure Dependency Injection
 
 Ensure Infrastructure services are registered in the DI container:
 
@@ -271,11 +295,11 @@ builder.Services.AddScoped<IProductService, ProductService>();
 ```
 
 
-### 7. Run the Application
+### 1.1.7. Run the Application
 
 Navigate to the Blazor UI project and run it:
 
-```properties
+```bash
 cd CleanArchitectureWebApp.UI
 dotnet run --launch-profile https
 ```
@@ -283,38 +307,38 @@ dotnet run --launch-profile https
 You should now have a working Blazor project set up with Clean Architecture principles!
 
 
-### 8. Test the Application
+### 1.1.8. Test the Application
 
 In __Clean Architecture__, referencing the __Test Projects__ (both __Unit Tests__ and __Integration Tests__) to the core layers needs to be done thoughtfully to maintain the separation of concerns and follow the principles of Clean Architecture. The test projects should have access to the layers they are testing, but they should not introduce unnecessary dependencies or violate architectural rules.
 
-#### 1. __Unit Tests Project__
+#### 1.1.8.1. __Unit Tests Project__
 
 - __Unit Tests__ are focused on testing individual components in isolation, typically within the __Domain__ and __Application__ layers. 
 - These tests should __only reference__ the specific layers they are testing and any necessary __testing libraries__ (like xUnit, NUnit, or Moq).
 
-##### References for Unit Tests:
+##### 1.1.8.1.1. References for Unit Tests:
 - __Domain Unit Tests__: Reference the __Domain Layer__.
 - __Application Unit Tests__: Reference the __Application Layer__.
 - __Infrastructure Unit Tests__: Reference the __Infrastructure Layer__.
 
 For example, the __DomainTests__ project should reference the `CleanArchitectureWebApp.Domain` project:
 
-```properties
+```bash
 dotnet add CleanArchitectureWebApp.Tests.Domain reference ../CleanArchitectureWebApp.Domain
 ```
 
 If you have a __Unit Test Project__ for the __Application Layer__:
 
-```properties
+```bash
 dotnet add CleanArchitectureWebApp.Tests.Application reference ../CleanArchitectureWebApp.Application
 ```
 
-#### 2. __Integration Tests Project__
+#### 1.1.8.2. __Integration Tests Project__
 
 - __Integration Tests__ are meant to test how different parts of the system interact, typically across layers. For example, you might want to test the interaction between the __Application Layer__ and the __Infrastructure Layer__ (such as making sure a repository correctly interacts with a database).
 - These tests should reference __multiple layers__ as needed. For example, if you're testing a service from the __Application Layer__ that interacts with a database from the __Infrastructure Layer__, you'll need to reference both.
 
-##### References for Integration Tests:
+##### 1.1.8.2.1. References for Integration Tests:
 - __Integration Tests__ might reference:
   - __Application Layer__
   - __Infrastructure Layer__
@@ -322,22 +346,22 @@ dotnet add CleanArchitectureWebApp.Tests.Application reference ../CleanArchitect
 
 For example, if you are writing an integration test for an application service that depends on the infrastructure (like database access):
 
-```properties
+```bash
 dotnet add CleanArchitectureWebApp.IntegrationTests reference ../CleanArchitectureWebApp.Application
 dotnet add CleanArchitectureWebApp.IntegrationTests reference ../CleanArchitectureWebApp.Infrastructure
 dotnet add CleanArchitectureWebApp.IntegrationTests reference ../CleanArchitectureWebApp.Domain
 ```
 
-#### Steps for Referencing Test Projects to Other Layers
+#### 1.1.8.3. Steps for Referencing Test Projects to Other Layers
 
 1. __Create the Test Projects__: First, ensure you have separate test projects for each of the layers you plan to test.
    - Example for __Unit Tests__:
-     ```properties
+     ```bash
      dotnet new xunit -o CleanArchitectureWebApp.Tests.Domain
      dotnet new xunit -o CleanArchitectureWebApp.Tests.Application
      ```
    - Example for __Integration Tests__:
-     ```properties
+     ```bash
      dotnet new xunit -o CleanArchitectureWebApp.IntegrationTests
      ```
 
@@ -345,17 +369,17 @@ dotnet add CleanArchitectureWebApp.IntegrationTests reference ../CleanArchitectu
    Use the `dotnet add reference` command to reference the layers that the test project needs to access.
    
    - Example for a __Domain Unit Test__ project referencing the __Domain Layer__:
-     ```properties
+     ```bash
      dotnet add CleanArchitectureWebApp.Tests.Domain reference ../CleanArchitectureWebApp.Domain
      ```
 
    - Example for an __Application Unit Test__ project referencing the __Application Layer__:
-     ```properties
+     ```bash
      dotnet add CleanArchitectureWebApp.Tests.Application reference ../CleanArchitectureWebApp.Application
      ```
 
    - Example for an __Integration Test__ project referencing __multiple layers__:
-     ```properties
+     ```bash
      dotnet add CleanArchitectureWebApp.IntegrationTests reference ../CleanArchitectureWebApp.Application
      dotnet add CleanArchitectureWebApp.IntegrationTests reference ../CleanArchitectureWebApp.Infrastructure
      dotnet add CleanArchitectureWebApp.IntegrationTests reference ../CleanArchitectureWebApp.Domain
@@ -363,16 +387,16 @@ dotnet add CleanArchitectureWebApp.IntegrationTests reference ../CleanArchitectu
 
 3. __Add Testing Libraries__: You may need to install additional packages for testing, mocking, and integration testing.
    - For __Unit Testing__ libraries like xUnit or NUnit:
-     ```properties
+     ```bash
      dotnet add CleanArchitectureWebApp.Tests package xunit
      dotnet add CleanArchitectureWebApp.Tests package Moq
      ```
    - For __Integration Testing__ libraries like `Microsoft.EntityFrameworkCore.InMemory` (if using EF Core):
-     ```properties
+     ```bash
      dotnet add CleanArchitectureWebApp.IntegrationTests package Microsoft.EntityFrameworkCore.InMemory
      ```
 
-#### Best Practices for Test Project References
+#### 1.1.8.4. Best Practices for Test Project References
 
 1. __Test Projects Should Depend on Other Projects, Not the Other Way Around__:
    - The core layers (Domain, Application, Infrastructure) __should not reference__ test projects.
@@ -388,7 +412,7 @@ dotnet add CleanArchitectureWebApp.IntegrationTests reference ../CleanArchitectu
 4. __Use In-Memory Databases for Integration Tests__:
    - When testing interactions with the database in integration tests, consider using an __in-memory database__ like `Microsoft.EntityFrameworkCore.InMemory` to avoid dependencies on a real database.
 
-#### Example of Integration Test with In-Memory Database
+#### 1.1.8.5. Example of Integration Test with In-Memory Database
 
 Here is a simple example of how an integration test might look, using an in-memory database for testing repository interaction:
 
@@ -426,7 +450,7 @@ public class OrderServiceIntegrationTests
 }
 ```
 
-#### Summary
+#### 1.1.8.6. Summary
 
 - __Unit Test Projects__ should reference only the specific layers they are testing.
   - __Domain Unit Tests__: Reference the __Domain Layer__.
@@ -439,11 +463,11 @@ public class OrderServiceIntegrationTests
 By organizing your references this way, you maintain the __separation of concerns__ and ensure that the __Clean Architecture__ principles are respected, while also ensuring testability across the different layers.
 
 
-### Summary of the Folder Structure
+### 1.1.9. Summary of the Folder Structure
 
 Below is a comprehensive directory structure for a __Clean Architecture__ project. It adheres to Clean Architecture principles, separating concerns and ensuring that dependencies flow inward. This example assumes you are using a __.NET 7+__ Blazor WebAssembly (or MVC) application, but the structure can be adapted to any other web or desktop technology.
 
-### Root Directory Structure:
+### 1.1.10. Root Directory Structure:
 
 ```
 /MitsubishiControllerWebApp
@@ -515,7 +539,7 @@ Below is a comprehensive directory structure for a __Clean Architecture__ projec
 └── /Docker                         # Docker-related files (e.g., Dockerfile, docker-compose.yml)
 ```
 
-### Key Components:
+### 1.1.11. Key Components:
 
 1. __Domain Layer__:
    - __Entities__: Core business entities, like `Customer`, `Order`, or `Product`.
@@ -558,7 +582,7 @@ Below is a comprehensive directory structure for a __Clean Architecture__ projec
 7. __Configurations__:
    - Centralized configuration files (`appsettings.json`), environment variables, or Docker configurations.
 
-### Benefits of This Structure:
+### 1.1.12. Benefits of This Structure:
 - __Separation of Concerns__: Each layer is isolated, making it easier to manage changes and dependencies.
 - __Testability__: By keeping the domain and application layers free from external dependencies, it's easier to unit test business logic.
 - __Flexibility__: The infrastructure and UI layers can be swapped or changed without affecting the core business logic.
